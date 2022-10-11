@@ -20,7 +20,11 @@
       {"Year":2022, "Gender": "Female", "value":32}
     ]
   },
-  "mark": "bar",
+  "layer": [{
+  "mark": {"type": "bar", "tooltip":true}
+  },{"mark": {"type": "text"},
+  "encoding": {"text": {"field": "value", "type": "quantitative"},
+        "color": {"scale": {"range": ["black"]}}}}],
   "encoding": {
     "x": {"field": "Year"},
     "y": {"field": "value", "type": "quantitative"},
