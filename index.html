@@ -36,11 +36,15 @@ This Visualisation will go into the fatal shootings by law enforcement in the Un
 in 1994 to compile and publish annual statistics on police use of excessive force, this was never carried out, and the Federal Bureau of Investigation does not collect these data.
 </p>
 
-<div class="pure-g">
-    <div class="pure-u-1-3"><p>Thirds</p></div>
-    <div class="pure-u-1-3"><p>Thirds</p></div>
-    <div class="pure-u-1-3"><div id = "LineChart" ></div>
-</div>
+<div id="map_code"></div>
+
+<script type="text/javascript">
+
+  var spec2 = "map_code.json";
+  vegaEmbed('#map_code', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
 	
     
 
