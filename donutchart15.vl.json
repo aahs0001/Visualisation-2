@@ -1,0 +1,20 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple donut chart with embedded data.",
+    "title": "Shootings by Ethnicity (2015)",
+    "data": {
+      "values": [
+        {"category": "White", "value": 502},
+        {"category": "Black", "value": 258},
+        {"category": "Asian", "value": 15},
+        {"category": "Natives", "value": 9},
+        {"category": "Hispanic", "value": 173},
+        {"category": "Others", "value": 14}
+      ]
+    },
+    "mark": {"type": "arc", "innerRadius": 40, "tooltip": true},
+    "encoding": {
+      "theta": {"field": "value", "type": "quantitative", "stack": "normalize"},
+      "color": {"field": "category", "type": "nominal"}
+    }
+  }

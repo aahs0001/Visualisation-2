@@ -1,0 +1,28 @@
+.page {
+	background-color: lightblue;
+	margin: auto;
+	padding: 50px;
+	padding-top: 35px;
+  }
+
+.title{
+    font-family: "Helvetica";
+    font-size: large;
+	text-align: center
+}
+
+.sp{
+	font-family: "Roboto Condensed";
+    font-size: 16px;
+	text-align: center
+}
+
+.p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.author{
+	font-size: 15px;
+	font-style: italic;
+    text-align: right
+  }

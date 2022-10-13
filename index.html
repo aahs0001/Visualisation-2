@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="style.css" media="all">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="title"><center><h1>US Police Killings from 2015 to 2022</h1></center></div>
+        <br>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+        <center ><div id = "vis3" ></div></center>
+    </div>
+    </div>
+    <!-- end pure grid group -->    
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="p"><center><h2>The above map shows the distribtion of <span style="color: darkred;" >police shootings</span> across the US, as well as how to victim was neutralised.</h2></center></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="sp">
+          <h3>As we can see, there were a lot more cases of killings by just shooting as compared to shooting and tasing, and the tasing count was <span style="color: darkred;" >0</span> by 2022.</h3> 
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="p"><center><h2>Line Chart depicting the cases of killings by time</h2></center></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <center><div id = "vis1"></div></center>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="sp">
+          <h3>If we look at the graph at the top, we can see that number of killings <span style="color: green;" >dropped</span> first in 2016,</h3>
+          <h3>the gradually increased finally to a maximum in 2021 before sharply <span style="color: green;" >dropping</span> again in 2022.</h3>
+          <br>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="p"><center><h2>Comparison of the race of victims (2015 vs 2022)</h2></center></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <center><div id = "vis2"></div></center>
+      </div>
+      <div class="pure-u-1-2">
+        <center><div id = "vis4"></div></center>
+      </div>
+    </div>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="sp"><center><h3>As we can see, Whites have always been the most targetted by the police. In 2015, the share for Blacks and Hispanics were almost same, but by 2022 Blacks were targeted a lot, despite the decrease in total cases. There was also a minor increase in the share of Asians and Natives targetted.</h3></center></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="p">
+          <br>
+          <br>
+          <center><h2>Comparison between men and women by year</h2></center>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div class="sp"><h3>Throughout the time period, men have outnumbered women by almost <span style="color: red;" >20 times</span>. Additionally, the number of women has mostly remained constant (around 45), whereas for men it followed the general trend and has reached an <span style="color: green;" >all time low</span> of 682 in 2022</h3></div>
+          </div>        
+      <div class="pure-u-1-2">
+        <center><div id = "vis5"></div></center>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+    
+    <!-- pure grid group -->
+    <div class = "author">
+      By Adeel Ahsan (32871538)   
+    </div>
+    
+
+  
+
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    var dc15 = "donutchart15.vl.json";
+    var dc22 = "donutchart22.vl.json";
+    var lc = "linechart.vl.json";
+    var mc = "mapcode.vl.json";
+    var sb = "stackedbar.vl.json";
+
+    vegaEmbed('#vis1', lc, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis2', dc15, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', mc, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', dc22, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', sb, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+
+  </script>
+</body>
+</html>
