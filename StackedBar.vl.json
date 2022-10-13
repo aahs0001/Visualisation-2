@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {"Year":2015, "Gender": "Male", "value":952},
+      {"Year":2015, "Gender": "Female", "value":42},
+      {"Year":2016, "Gender": "Male", "value":918},
+      {"Year":2016, "Gender": "Female", "value":40},
+      {"Year":2017, "Gender": "Male", "value":935},
+      {"Year":2017, "Gender": "Female", "value":45},
+      {"Year":2018, "Gender": "Male", "value":941},
+      {"Year":2018, "Gender": "Female", "value":52},
+      {"Year":2019, "Gender": "Male", "value":956},
+      {"Year":2019, "Gender": "Female", "value":43},
+      {"Year":2020, "Gender": "Male", "value":982},
+      {"Year":2020, "Gender": "Female", "value":38},
+      {"Year":2021, "Gender": "Male", "value":995},
+      {"Year":2021, "Gender": "Female", "value":56},
+      {"Year":2022, "Gender": "Male", "value":682},
+      {"Year":2022, "Gender": "Female", "value":32}
+    ]
+  },
+  "layer": [{
+  "mark": {"type": "bar", "tooltip":true}
+  },{"mark": {"type": "text",
+      "align": "left",
+      "baseline": "bottom",
+      "dx": 3},
+  "encoding": {
+      "text": {"field": "value", "type": "quantitative"}}}],
+  "encoding": {
+    "x": {"field": "Year"},
+    "y": {"field": "value", "type": "quantitative"},
+    "xOffset": {"field": "Gender"},
+    "color": {"field": "Gender", "scale": {"range": ["#E75480", "#00008B"]}
+  }
+}
+
+}
