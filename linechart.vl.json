@@ -41,10 +41,12 @@
     "x": {
       "field": "year",
       "type": "ordinal"
+      
     },
     "y": {
       "field": "killings",
-      "type": "quantitative"
+      "type": "quantitative",
+      "title": "Number of killings"
     }
   }
 }

@@ -16,7 +16,7 @@
     },
     "mark": {"type": "arc", "innerRadius": 60, "tooltip": true},
     "encoding": {
-      "theta": {"field": "value", "type": "quantitative", "stack": "normalize"},
-      "color": {"field": "category", "type": "nominal"}
+      "theta": {"field": "value", "type": "quantitative", "stack": "normalize", "title": "Number of killings"},
+      "color": {"field": "category", "type": "nominal", "title": "Race"}
     }
   }
