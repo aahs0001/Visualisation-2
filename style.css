@@ -1,5 +1,6 @@
 .page {
-	background-color: lightblue;
+	width: 1200px;
+	background-color: rgb(188, 232, 247);
 	margin: auto;
 	padding: 50px;
 	padding-top: 35px;
@@ -7,22 +8,43 @@
 
 .title{
     font-family: "Helvetica";
-    font-size: large;
+	background-color: rgb(230, 58, 58);
+    font-size: 35;
+	font-weight: bolder;
 	text-align: center
 }
 
-.sp{
+.sub{
 	font-family: "Roboto Condensed";
-    font-size: 16px;
+	text-decoration: underline;
+    font-size: larger;
+	font-style: italic;
 	text-align: center
 }
 
-.p{
+.para2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: rgb(73, 71, 71);
+	line-height: 200%;
+  	margin-right: 60px;
+  	margin-left: 60px;
+	text-align: center
+
+}
+
+.i{
+  	margin-left: 100px;
+}
+
+.para{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: rgb(73, 71, 71);
+  	margin-right: 150px;
+  	margin-left: 80px;
 }
 
 .author{
-	font-size: 15px;
+	font-size: 19px;
 	font-style: italic;
-    text-align: right
+    text-align: left
   }
